@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Dispatches — The Drowned Concordat</title>
+    <link>https://thedrownedconcordat.com/dispatches/</link>
+    <description>Weekly real-world news on rising seas, flood defences and the future of food, from Hamish C. Rannoch.</description>
+    <language>en</language>
+    <item>
+      <title>The wall is a system, and the menu is a gamble</title>
+      <link>https://thedrownedconcordat.com/dispatches/the-wall-is-a-system</link>
+      <guid>https://thedrownedconcordat.com/dispatches/the-wall-is-a-system</guid>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+      <description>London learns its sea is rising faster than it used to, and the companies betting on lab-grown meat are running short of money. Two real stories that could have come from behind the wall.</description>
+    </item>
+  </channel>
+</rss>

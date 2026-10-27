@@ -10,3 +10,16 @@ Pages are served without `.html` (Netlify "pretty URLs"), so `world.html` is at 
 - `cast.html` – cast and factions (spoiler-free)
 - `world.html` – world guide (spoiler-free)
 - `images/world/` – art for the world guide
+- `posts/` – Dispatches blog posts, one Markdown file each (`YYYY-MM-DD-slug.md`)
+- `dispatches/` – generated blog pages and RSS feed (don't edit by hand)
+- `tools/build_blog.py` – turns `posts/` into `dispatches/`
+
+## Adding a Dispatch
+
+1. Add `posts/YYYY-MM-DD-slug.md` (see the front-matter format at the top of `tools/build_blog.py`).
+2. Run `python3 tools/build_blog.py` (needs `pip install markdown`).
+3. Commit both the post and the regenerated `dispatches/` folder.
+
+Weekly drafts arrive on a `dispatch/YYYY-MM-DD` branch as a pull request. Merging it publishes the post.
+
+House rules for Dispatches: real news, paraphrased and linked; spoiler-free (nothing past Book One's opening premise); only promote Book One; never mention Business Time.

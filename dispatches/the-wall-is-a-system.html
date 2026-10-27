@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The wall is a system, and the menu is a gamble — Dispatches</title>
+<meta name="description" content="London learns its sea is rising faster than it used to, and the companies betting on lab-grown meat are running short of money. Two real stories that could have come from behind the wall.">
+<link rel="canonical" href="https://thedrownedconcordat.com/dispatches/the-wall-is-a-system">
+<link rel="alternate" type="application/rss+xml" title="Dispatches — The Drowned Concordat" href="/dispatches/feed.xml">
+<meta property="og:title" content="The wall is a system, and the menu is a gamble — Dispatches">
+<meta property="og:description" content="London learns its sea is rising faster than it used to, and the companies betting on lab-grown meat are running short of money. Two real stories that could have come from behind the wall.">
+<meta property="og:image" content="https://thedrownedconcordat.com/images/world/bulwark-storm.jpg">
+<meta property="og:url" content="https://thedrownedconcordat.com/dispatches/the-wall-is-a-system">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-deep: #05060a; --bg-panel: #0b0e16; --line: rgba(255,255,255,0.08);
+  --text-main: #e8e6df; --text-dim: #8b8f9c; --accent: #7fd8ff;
+  --accent-warm: #d9a86c; --accent-glow: rgba(127, 216, 255, 0.35);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-deep); color: var(--text-main); font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; position: relative; }
+.stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.45;
+  background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent), radial-gradient(1px 1px at 140px 80px, #fff, transparent),
+  radial-gradient(1.5px 1.5px at 300px 150px, #fff, transparent), radial-gradient(1px 1px at 520px 220px, #fff, transparent),
+  radial-gradient(1.5px 1.5px at 640px 40px, #fff, transparent), radial-gradient(1px 1px at 880px 100px, #fff, transparent),
+  radial-gradient(1px 1px at 1000px 300px, #fff, transparent);
+  background-size: 1100px 500px; }
+.glow-orb { position: fixed; border-radius: 50%; filter: blur(90px); z-index: 0; pointer-events: none;
+  width: 480px; height: 480px; background: var(--accent-glow); top: -160px; right: -120px; opacity: 0.7; }
+header, main, footer { position: relative; z-index: 1; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 32px 6vw; border-bottom: 1px solid var(--line); }
+.pen-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.08em; color: var(--text-dim); text-decoration: none; }
+nav a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 36px; transition: color 0.25s ease; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+nav a.nav-buy { color: var(--accent); }
+nav a { white-space: nowrap; }
+@media (max-width: 1400px) and (min-width: 801px) { nav a { margin-left: 22px; font-size: 0.8rem; } }
+@media (max-width: 1200px) and (min-width: 801px) { nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; } nav a { margin-left: 0; } }
+.section-tag { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 18px; }
+.page-head { text-align: center; padding: 110px 6vw 60px; max-width: 760px; margin: 0 auto; }
+.page-head h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(3rem, 8vw, 5.8rem); line-height: 0.95;
+  background: linear-gradient(180deg, #ffffff 0%, #b9c2cf 60%, #6f7889 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.page-head p { margin-top: 24px; color: var(--text-dim); font-weight: 300; line-height: 1.7; font-size: clamp(1rem, 1.5vw, 1.15rem); }
+.page-head em { color: var(--accent-warm); font-style: italic; }
+.feed-link { display: inline-block; margin-top: 22px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.feed-link:hover { text-decoration: underline; }
+
+.post-list { max-width: 960px; margin: 0 auto; padding: 0 6vw 120px; display: grid; gap: 28px; }
+.post-card { display: grid; grid-template-columns: 300px 1fr; background: linear-gradient(160deg, var(--bg-panel), #05060a);
+  border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit;
+  transition: transform 0.35s ease, border-color 0.35s ease; }
+.post-card:hover { transform: translateY(-6px); border-color: rgba(127,216,255,0.4); }
+.post-card img { width: 100%; height: 100%; min-height: 200px; object-fit: cover; display: block; }
+.post-card .body { padding: 28px 30px; }
+.post-card time, .post-meta time { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.post-card h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin-top: 10px; }
+.post-card p { margin-top: 12px; color: var(--text-dim); font-weight: 300; line-height: 1.65; font-size: 0.95rem; }
+.post-card .more { margin-top: 16px; display: inline-block; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-warm); }
+.empty { text-align: center; color: var(--text-dim); padding: 40px 0 120px; font-style: italic; }
+
+article.post { max-width: 720px; margin: 0 auto; padding: 100px 6vw 40px; }
+.post-meta { text-align: center; }
+article.post h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; text-align: center; margin-top: 16px; }
+.post-dek { text-align: center; margin: 22px auto 0; color: var(--text-dim); font-weight: 300; line-height: 1.7; font-size: 1.08rem; max-width: 600px; }
+.post-hero { margin: 50px 0 46px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 60px rgba(127,216,255,0.06); }
+.post-hero img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+.prose p, .prose li { color: #c9c8c2; line-height: 1.85; font-weight: 300; font-size: 1.04rem; }
+.prose p { margin-bottom: 20px; }
+.prose h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.9rem; line-height: 1.15; margin: 48px 0 16px; color: var(--text-main); }
+.prose h3 { font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent-warm); margin: 40px 0 12px; font-weight: 500; }
+.prose a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(127,216,255,0.35); }
+.prose a:hover { border-bottom-color: var(--accent); }
+.prose strong { color: var(--text-main); font-weight: 500; }
+.prose em { color: var(--accent-warm); }
+.prose ul, .prose ol { margin: 0 0 20px 22px; }
+.prose blockquote { border-left: 2px solid var(--accent); padding: 4px 0 4px 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: var(--text-main); }
+.prose blockquote p { font-size: inherit; color: inherit; margin: 0; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 44px 0; }
+.sources { margin-top: 54px; padding-top: 28px; border-top: 1px solid var(--line); }
+.sources h2 { font-size: 0.75rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-dim); font-weight: 500; margin-bottom: 14px; }
+.sources ol { margin-left: 20px; }
+.sources li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.6; margin-bottom: 8px; font-weight: 300; }
+.sources a { color: var(--accent); text-decoration: none; }
+.sources a:hover { text-decoration: underline; }
+.post-cta { max-width: 720px; margin: 0 auto 110px; padding: 40px 6vw 0; text-align: center; }
+.post-cta p { color: var(--text-dim); font-weight: 300; line-height: 1.7; }
+.post-cta em { color: var(--accent-warm); }
+.cta-row { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.btn { padding: 14px 30px; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; display: inline-block; }
+.btn-primary { background: var(--accent); color: #05060a; font-weight: 600; box-shadow: 0 0 30px var(--accent-glow); }
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-ghost { border: 1px solid var(--line); color: var(--text-main); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+footer { padding: 60px 6vw 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--line); }
+.footer-mark { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-dim); font-size: 0.9rem; }
+.socials { display: flex; gap: 22px; }
+.socials a { color: var(--text-dim); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.socials a:hover { color: var(--accent); }
+
+@media (max-width: 800px) {
+  header { flex-wrap: wrap; gap: 14px; }
+  nav { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+  nav a { margin-left: 0; }
+  .post-card { grid-template-columns: 1fr; }
+  .post-card img { min-height: 0; aspect-ratio: 16/9; height: auto; }
+  .post-card .body { padding: 22px 22px 26px; }
+  article.post { padding-top: 70px; }
+}
+</style>
+</head>
+<body>
+  <div class="stars"></div><div class="glow-orb"></div>
+  <header>
+    <a class="pen-name" href="/">Hamish C. Rannoch</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/books">The Series</a>
+      <a href="/books#novellas">Novellas</a>
+      <a href="/cast">Cast &amp; Factions</a>
+      <a href="/world">The World</a>
+      <a href="/dispatches/" aria-current="page">Dispatches</a>
+      <a href="/#about">About</a>
+      <a class="nav-buy" href="https://www.amazon.com/dp/B0HJLRN48X" target="_blank" rel="noopener">Buy Book One</a>
+    </nav>
+  </header>
+  <main>
+    <article class="post">
+      <div class="post-meta"><div class="section-tag">Dispatch</div><time datetime="2026-10-27">27 October 2026</time></div>
+      <h1>The wall is a system, and the menu is a gamble</h1>
+      <p class="post-dek">London learns its sea is rising faster than it used to, and the companies betting on lab-grown meat are running short of money. Two real stories that could have come from behind the wall.</p>
+      <figure class="post-hero"><img src="/images/world/bulwark-storm.jpg" alt="Storm waves breaking against a towering concrete sea wall at night, city lights behind it" width="1280" height="720"></figure>
+      <div class="prose">
+<p>Welcome to Dispatches. Each week I&rsquo;ll pick out a few real stories that read as if they had leaked through the Bulwark: the seas, the walls we build against them, and the strange business of deciding what people eat. No spoilers here, ever. Just the news, and a note on why it caught my eye.</p>
+<h2>London checks its wall</h2>
+<p>The Environment Agency has published its fifteen-year check-up on the plan that protects London and the Thames Estuary from the sea. The headline number is small but it isn&rsquo;t comforting. Between 1993 and 2024, the estuary&rsquo;s sea level rose by an average of just over 4 mm a year. The previous review, covering roughly 1990 to 2018, found a little over 3.6 mm. The rise is speeding up.</p>
+<p>The more interesting detail is in the machinery. The defences themselves are in good shape: around 96% of the estuary&rsquo;s walls and embankments meet their required condition. The weak point is prediction. The Thames Barrier closes on forecasts, and today those forecasts can be out by 30 to 40 cm. The goal is to get that down to 20 cm by 2030. If that doesn&rsquo;t happen, the Barrier will have to close more often just to be safe, including on days when it turns out it didn&rsquo;t need to.</p>
+<h3>Why it caught my eye</h3>
+<p>In the book, the engineers insist the Bulwark is not a wall. It&rsquo;s a system of gates, locks, pumps and people, watched every hour of every day. The Thames review says the same thing in a civil servant&rsquo;s voice. Concrete is the easy part. What keeps a city dry is the forecast, the maintenance schedule, and someone deciding when to close the gates.</p>
+<h2>The lab-grown meat bubble deflates</h2>
+<p>Food Safety News ran a long look at cultivated meat this month, and the picture is much less glossy than it was five years ago. Venture money has collapsed, from roughly $989 million in 2021 to about $36 million in 2025. Several companies have closed, including two Dutch ones: Meatable, which shut down late last year, and Upstream Foods, which was working on cultivated salmon fat. Believer Meats, once valued at $600 million, closed without ever producing anything and left behind an empty $125 million plant in North Carolina.</p>
+<p>Regulators haven&rsquo;t made it easier. Products have been approved in the US, Singapore, Australia, New Zealand, Israel and Hong Kong, but the European Food Safety Authority has yet to approve any for sale in the EU. Meanwhile at least eight US states have banned or heavily restricted cultivated meat, and South Dakota&rsquo;s five-year moratorium began in July.</p>
+<h3>Why it caught my eye</h3>
+<p>The Delta eats gel, synthesised at industrial scale, because there is nothing else. Our world is running the experiment in the other direction. We have plenty of real food, and the synthetic kind is fighting for money, permission and appetite. Whether lab-grown food ever feeds anyone may depend less on chemistry than on who is allowed to sell it, and who decides they would rather ban it.</p>
+<hr />
+<p>See you next week. If you spot a story that belongs here, send it my way on <a href="https://www.instagram.com/hamish.c.rannoch/">Instagram</a>.</p>
+      </div>
+      <aside class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>ianVisits: <a href="https://www.ianvisits.co.uk/articles/thames-sea-levels-are-rising-faster-as-flood-defence-pressures-grow-91789/" target="_blank" rel="noopener">Thames sea levels are rising faster as flood defence pressures grow (20 August 2026)</a></li>
+          <li>GOV.UK, Environment Agency: <a href="https://www.gov.uk/government/publications/thames-estuary-2100-15-year-monitoring-review-non-technical-summary/thames-estuary-2100-15-year-monitoring-review-2026" target="_blank" rel="noopener">Thames Estuary 2100: 15-year monitoring review</a></li>
+          <li>Food Safety News: <a href="https://www.foodsafetynews.com/2026/10/sunday-edition-cultivated-meat.md" target="_blank" rel="noopener">Sunday Edition: cultivated meat (11 October 2026)</a></li>
+        </ol>
+      </aside>
+    </article>
+    <section class="post-cta">
+      <p>The world behind the wall is fiction. <em>The Rise of the Covenant</em>, Book One of The Drowned Concordat, is out now on Kindle.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HJLRN48X" target="_blank" rel="noopener">Buy Book One</a>
+        <a class="btn btn-ghost" href="/dispatches/">More Dispatches</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-mark">Hamish C. Rannoch — The Drowned Concordat</div>
+    <div class="socials">
+      <a href="/dispatches/feed.xml">RSS</a>
+      <a href="https://www.instagram.com/hamish.c.rannoch/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@hamish.c.rannoch" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:hamish.c.rannoch@gmail.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
