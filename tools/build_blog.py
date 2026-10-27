@@ -246,7 +246,7 @@ def build():
     # Remove pages for posts that no longer exist.
     keep = {f"{p['slug']}.html" for p in posts} | {"index.html", "feed.xml"}
     for f in OUT.glob("*"):
-        if f.name not in keep:
+        if f.name not in keep and not f.name.startswith("google"):  # keep Search Console verification files
             f.unlink()
 
     for p in posts:
