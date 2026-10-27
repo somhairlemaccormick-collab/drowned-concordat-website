@@ -213,6 +213,7 @@ def page(title, description, url, image, body):
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
 <link rel="canonical" href="{SITE}{url}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Dispatches — The Drowned Concordat" href="/dispatches/feed.xml">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(description)}">
@@ -341,7 +342,29 @@ def build():
 """,
         encoding="utf-8",
     )
+    write_sitemap(posts)
     print(f"Built {len(posts)} post(s) into {OUT.relative_to(ROOT)}/")
+
+
+# Main pages for the sitemap: (path, file it is served from)
+MAIN_PAGES = [("/", "index.html"), ("/books", "books.html"), ("/world", "world.html"), ("/cast", "cast.html")]
+
+
+def write_sitemap(posts):
+    """sitemap.xml at the site root: main pages, the Dispatches index and every post."""
+    def lastmod(path):
+        return dt.date.fromtimestamp((ROOT / path).stat().st_mtime).isoformat()
+
+    urls = [(SITE + u, lastmod(f)) for u, f in MAIN_PAGES if (ROOT / f).exists()]
+    if posts:
+        urls.append((f"{SITE}/dispatches/", posts[0]["date"].isoformat()))
+    urls += [(f"{SITE}/dispatches/{p['slug']}", p["date"].isoformat()) for p in posts]
+    body = "\n".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
+    (ROOT / "sitemap.xml").write_text(
+        f'<?xml version="1.0" encoding="UTF-8"?>\n'
+        f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n',
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":

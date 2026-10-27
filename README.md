@@ -23,3 +23,11 @@ Pages are served without `.html` (Netlify "pretty URLs"), so `world.html` is at 
 Weekly drafts arrive on a `dispatch/YYYY-MM-DD` branch as a pull request. Merging it publishes the post.
 
 House rules for Dispatches: real news, paraphrased and linked; spoiler-free (nothing past Book One's opening premise); only promote Book One; never mention Business Time.
+
+## Search engines
+
+- Each main page has a description, social-sharing tags, a canonical address and (on Home and The Series)
+  structured book data that Google reads.
+- `sitemap.xml` is rebuilt by `python3 tools/build_blog.py`, so run that after adding a Dispatch or a page.
+  New main pages need adding to `MAIN_PAGES` in that script.
+- `robots.txt` points search engines at the sitemap.
