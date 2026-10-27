@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World — The Drowned Concordat</title>
+<meta name="description" content="A spoiler-free field guide to the world of The Drowned Concordat: the Bulwark, the Delta, the gel rations and who really runs things behind the wall.">
+<meta property="og:title" content="Behind the Wall — The World of The Drowned Concordat">
+<meta property="og:description" content="A spoiler-free field guide to the drowned Netherlands of Hamish C. Rannoch's dystopian sci-fi series.">
+<meta property="og:image" content="https://thedrownedconcordat.com/images/world/bulwark-storm.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-deep: #05060a;
+    --bg-panel: #0b0e16;
+    --line: rgba(255,255,255,0.08);
+    --text-main: #e8e6df;
+    --text-dim: #8b8f9c;
+    --accent: #7fd8ff;
+    --accent-warm: #d9a86c;
+    --accent-glow: rgba(127, 216, 255, 0.35);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Starfield */
+  .stars, .stars2, .stars3 {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    background: transparent;
+    z-index: 0;
+  }
+  .stars { background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 140px 80px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 300px 150px, #fff, transparent),
+    radial-gradient(1px 1px at 400px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 520px 220px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 640px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 760px 180px, #fff, transparent),
+    radial-gradient(1px 1px at 880px 100px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 90px 260px, #fff, transparent),
+    radial-gradient(1px 1px at 1000px 300px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 1100px 500px;
+    opacity: 0.5;
+  }
+  .stars2 { background-image:
+    radial-gradient(1px 1px at 60px 120px, var(--accent), transparent),
+    radial-gradient(1px 1px at 220px 200px, var(--accent), transparent),
+    radial-gradient(1px 1px at 480px 40px, var(--accent), transparent),
+    radial-gradient(1px 1px at 700px 260px, var(--accent), transparent),
+    radial-gradient(1px 1px at 950px 150px, var(--accent), transparent);
+    background-repeat: repeat;
+    background-size: 1100px 500px;
+    opacity: 0.35;
+  }
+
+  .glow-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .glow-orb.one { width: 500px; height: 500px; background: var(--accent-glow); top: -150px; right: -100px; }
+  .glow-orb.two { width: 400px; height: 400px; background: rgba(217,168,108,0.15); bottom: 10%; left: -150px; }
+
+  header, main, footer { position: relative; z-index: 1; }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 6vw;
+    border-bottom: 1px solid var(--line);
+  }
+  .pen-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+  nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-left: 36px;
+    transition: color 0.25s ease;
+  }
+  nav a:hover { color: var(--accent); }
+
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 6vw;
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    background: linear-gradient(180deg, #ffffff 0%, #b9c2cf 60%, #6f7889 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero .subtitle {
+    margin-top: 26px;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    color: var(--text-dim);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .hero .subtitle em { color: var(--accent-warm); font-style: italic; }
+
+  .cta-row {
+    margin-top: 46px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .btn {
+    padding: 15px 34px;
+    border-radius: 2px;
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #05060a;
+    font-weight: 600;
+    box-shadow: 0 0 30px var(--accent-glow);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px var(--accent-glow); }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    color: var(--text-main);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  .scroll-cue {
+    margin-top: 70px;
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(var(--accent), transparent);
+    opacity: 0.6;
+  }
+
+  section { padding: 130px 6vw; }
+  .section-head { max-width: 640px; margin: 0 auto 70px; text-align: center; }
+  .section-tag {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 18px;
+  }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  .section-head p {
+    margin-top: 20px;
+    color: var(--text-dim);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  /* Books */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .book-card {
+    background: linear-gradient(160deg, var(--bg-panel), #05060a);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .book-card:hover { transform: translateY(-8px); border-color: rgba(127,216,255,0.4); }
+  .book-cover {
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(127,216,255,0.18), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(217,168,108,0.14), transparent 55%),
+      linear-gradient(200deg, #10131c, #05060a 70%);
+    border-bottom: 1px solid var(--line);
+  }
+  .book-cover .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--accent-warm);
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .book-cover .glyph {
+    width: 46px; height: 46px;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    box-shadow: 0 0 22px var(--accent-glow);
+  }
+  .book-cover .placeholder-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0 24px;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+  .book-cover.has-art {
+    padding: 0;
+    display: block;
+  }
+  .book-cover .cover-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .book-meta { padding: 22px 22px 26px; }
+  .book-meta .status {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .book-meta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: var(--text-dim);
+  }
+  .book-meta .teaser {
+    margin-top: 14px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+
+  /* About */
+  .about-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .author-mark {
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 35% 30%, rgba(127,216,255,0.25), transparent 60%),
+      linear-gradient(160deg, #10131c, #05060a);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: var(--accent);
+    box-shadow: 0 0 50px rgba(127,216,255,0.12);
+  }
+  .about-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 22px;
+  }
+  .about-text p {
+    color: var(--text-dim);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  /* Cast & Factions */
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cast-card {
+    background: linear-gradient(160deg, var(--bg-panel), #05060a);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 26px 24px;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .cast-card:hover { transform: translateY(-6px); border-color: rgba(127,216,255,0.4); }
+  .cast-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--text-main);
+  }
+  .cast-card .cast-role {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-top: 8px;
+  }
+  .cast-card p {
+    margin-top: 14px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+  .subsection-head {
+    max-width: 640px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .subsection-head .section-tag {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 14px;
+  }
+  .subsection-head h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--text-main);
+  }
+
+  footer {
+    padding: 60px 6vw 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+  .socials { display: flex; gap: 22px; }
+  .socials a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+  }
+  .socials a:hover { color: var(--accent); }
+
+  .placeholder-note {
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: rgba(139,143,156,0.6);
+    padding: 18px 6vw 40px;
+    font-style: italic;
+  }
+
+  @media (max-width: 800px) {
+    .books-grid { grid-template-columns: 1fr; }
+    .about-wrap { grid-template-columns: 1fr; }
+    .author-mark { margin: 0 auto; }
+    nav a { margin-left: 18px; }
+  }
+
+  .btn-buy {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 24px;
+    border-radius: 2px;
+    background: var(--accent);
+    color: #05060a;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 0 22px var(--accent-glow);
+    transition: all 0.3s ease;
+  }
+  .btn-buy:hover { transform: translateY(-2px); box-shadow: 0 0 34px var(--accent-glow); }
+  nav a.nav-buy { color: var(--accent); }
+
+  /* World guide */
+  .world-hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 110px 6vw 80px;
+  }
+  .world-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    background: linear-gradient(180deg, #ffffff 0%, #b9c2cf 60%, #6f7889 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .world-hero > p {
+    margin-top: 26px;
+    max-width: 600px;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+  }
+  .world-hero em, .chapter-text em, .world-cta em { color: var(--accent-warm); font-style: italic; }
+  .spoiler-note {
+    margin-top: 28px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(127,216,255,0.3);
+    padding: 10px 18px;
+    border-radius: 2px;
+  }
+  .world-toc {
+    margin-top: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 26px;
+    max-width: 760px;
+  }
+  .world-toc a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+  }
+  .world-toc a:hover { color: var(--accent); }
+
+  .world-chapter {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 90px 6vw;
+    scroll-margin-top: 20px;
+  }
+  .world-chapter.flip figure { order: 2; }
+  .world-chapter figure {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 60px rgba(127,216,255,0.06);
+  }
+  .world-chapter img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: cover;
+  }
+  .chapter-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    line-height: 1.1;
+    margin-bottom: 22px;
+  }
+  .chapter-text p {
+    color: var(--text-dim);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .chapter-text strong { color: var(--text-main); font-weight: 500; }
+
+  .waterline { scroll-margin-top: 20px; }
+  .more-link { text-align: center; margin-top: 44px; }
+  .more-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .more-link a:hover { text-decoration: underline; }
+
+  .glossary dl {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+  }
+  .glossary dl > div {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .glossary dt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--text-main);
+  }
+  .glossary dd {
+    margin-top: 6px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .world-cta { text-align: center; padding-top: 60px; }
+  .world-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  .world-cta > p { margin-top: 16px; color: var(--text-dim); font-weight: 300; }
+  .world-cta .cta-row { justify-content: center; }
+
+  @media (max-width: 800px) {
+    header { flex-wrap: wrap; gap: 14px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+    nav a { margin-left: 0; }
+    .world-chapter { grid-template-columns: 1fr; gap: 30px; padding: 60px 6vw; }
+    .world-chapter.flip figure { order: 0; }
+    .world-chapter img { max-height: 420px; }
+    .glossary dl { grid-template-columns: 1fr; }
+    .cast-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <a class='pen-name' href='/' style='text-decoration:none;'>Hamish C. Rannoch</a>
+    <nav>
+      <a href='/'>Home</a>
+      <a href='/books'>The Series</a>
+      <a href='/books#novellas'>Novellas</a>
+      <a href='/cast'>Cast &amp; Factions</a>
+      <a href='/world'>The World</a>
+      <a href='/#about'>About</a>
+      <a class="nav-buy" href="https://www.amazon.com/dp/B0HJLRN48X" target="_blank" rel="noopener">Buy Book One</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="world-hero">
+      <div class="section-tag">A Field Guide</div>
+      <h1>Behind the Wall</h1>
+      <p>The world of <em>The Drowned Concordat</em>: the sea that took it, the wall that holds it back, and the people who decide what everyone inside gets to eat.</p>
+      <div class="spoiler-note">Spoiler-free. Setting only — nothing here goes past the opening pages of Book One.</div>
+      <nav class="world-toc" aria-label="On this page">
+        <a href="#drowned-world">The Drowned World</a>
+        <a href="#bulwark">The Bulwark</a>
+        <a href="#delta">The Delta</a>
+        <a href="#food">What the Delta Eats</a>
+        <a href="#real-food">Real Food</a>
+        <a href="#order">Keeping Order</a>
+        <a href="#waterline">Below the Waterline</a>
+        <a href="#glossary">Glossary</a>
+      </nav>
+    </section>
+
+    <article class="world-chapter" id="drowned-world">
+      <figure><img src="/images/world/bulwark-coast.jpg" alt="Towers and green terraces running along the top of a vast sea wall, with open ocean beyond" loading="lazy" width="1280" height="720"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">01 · The Drowned World</div>
+        <h2>The sea came, and stayed</h2>
+        <p>The oceans rose and most of the old coastlines went under. In the emergency years — more than a century ago now — what remained of the Netherlands made a choice: wall itself in, pump itself dry, and survive.</p>
+        <p>It worked. The generations born since have never known anything else. Outside the wall are the sea and the wilds. Inside is everyone who made it.</p>
+      </div>
+    </article>
+
+    <article class="world-chapter flip" id="bulwark">
+      <figure><img src="/images/world/bulwark-storm.jpg" alt="Storm waves breaking against a towering concrete sea wall at night, city lights behind it" loading="lazy" width="1280" height="720"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">02 · The Bulwark</div>
+        <h2>It is not a wall</h2>
+        <p>The engineers will tell you that, patiently, every time. The Bulwark is a system — sea defences, gates, locks and pumps, watched and maintained around the clock, every seal accounted for.</p>
+        <p>Everyone calls it the wall anyway. And over time the name has come to mean everything it protects: the land, the state, the people. To live in the Bulwark is to live because of it.</p>
+      </div>
+    </article>
+
+    <article class="world-chapter" id="delta">
+      <figure><img src="/images/world/delta-terraces.jpg" alt="A dense, layered city of towers, terraces and suspended walkways under a smoky sky" loading="lazy" width="1280" height="720"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">03 · The Delta</div>
+        <h2>A city built downwards and up</h2>
+        <p>Behind the wall, the Delta packs a population into every level it can find. Towers climb above the old flood line; transit runs through and between them; mag-lev freight carries the ration from the plants to the people.</p>
+        <p>At the very bottom is <strong>the Bilge</strong> — the lowest level, where the water never quite leaves and the people who live there know it.</p>
+      </div>
+    </article>
+
+    <article class="world-chapter flip" id="food">
+      <figure><img src="/images/world/delta-transit.jpg" alt="Crowds moving through a vast glass transit hall, a train arriving beneath surveillance signs" loading="lazy" width="1376" height="768"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">04 · What the Delta Eats</div>
+        <h2>Gel, foam or lump</h2>
+        <p>Nothing the Delta eats grows in soil. Its food is <strong>gel</strong> — synthesised at industrial scale, nutritionally complete, and dispensed in two forms: foam and lump. Ration bars fill the gaps.</p>
+        <p>The chemistry is run by <strong>Axiom Chemical Synthesis</strong>, whose plants keep the Bulwark fed. Every calorie is counted and every gram is accounted for — which is exactly what you would want, if you had never asked who does the counting.</p>
+      </div>
+    </article>
+
+    <article class="world-chapter" id="real-food">
+      <figure><img src="/images/world/street-wide.jpg" alt="A rain-soaked street of hooded figures under propaganda screens reading Surveillance is Safety" loading="lazy" width="1376" height="768"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">05 · Real Food</div>
+        <h2>A rumour, for most</h2>
+        <p>Real food — soil-grown, animal-derived — still exists. A very few people eat it, and they are mostly the richest people in the Bulwark. To everyone else it is closer to a story: nobody they know has ever tasted it.</p>
+        <p>What there is of it is licensed by <strong>the Verdant Exchange</strong>, a distribution authority older than the Council itself.</p>
+      </div>
+    </article>
+
+    <article class="world-chapter flip" id="order">
+      <figure><img src="/images/world/delta-street.jpg" alt="Drones and searchlights over a dark street, a train passing overhead and slogans on giant screens" loading="lazy" width="768" height="1376"></figure>
+      <div class="chapter-text">
+        <div class="section-tag">06 · Keeping Order</div>
+        <h2>The Council and the Corps</h2>
+        <p><strong>The Council</strong> — formally the Unified Planetary Council — is the elected body that governs the Bulwark and rations everyone inside it, one contract at a time.</p>
+        <p>Order is kept by <strong>the Directorate and the Corps</strong>. Their Enforcers are trained and equipped to manage crowds and keep the peace.</p>
+      </div>
+    </article>
+
+    <section class="waterline" id="waterline">
+      <div class="section-head">
+        <div class="section-tag">07 · Below the Waterline</div>
+        <h2>Who the Council doesn't control</h2>
+        <p>Wherever there is rationing, there is someone working the gaps. Three names you will hear in the Delta:</p>
+      </div>
+      <div class="cast-grid">
+        <div class="cast-card">
+          <h3>The Undertow</h3>
+          <div class="cast-role">The Water Trade</div>
+          <p>No ideology, no doctrine — just control of the water, and a toll for anyone who needs it.</p>
+        </div>
+        <div class="cast-card">
+          <h3>The Gleaners</h3>
+          <div class="cast-role">Collectors</div>
+          <p>More disciplined, and more feared, than any street gang — and considerably harder to say no to.</p>
+        </div>
+        <div class="cast-card">
+          <h3>The Covenant of the First Breath</h3>
+          <div class="cast-role">The Movement</div>
+          <p>Started with a shared meal and a simple belief: synthetic food is a sin. It hasn't stayed small.</p>
+        </div>
+      </div>
+      <p class="more-link"><a href="/cast">Meet the full cast &amp; factions →</a></p>
+    </section>
+
+    <section class="glossary" id="glossary">
+      <div class="section-head">
+        <div class="section-tag">Glossary</div>
+        <h2>Words you'll hear behind the wall</h2>
+      </div>
+      <dl>
+        <div><dt>The Bulwark</dt><dd>The sea defences that keep the drowned Netherlands dry — and, by extension, the sealed state that lives behind them.</dd></div>
+        <div><dt>The Delta</dt><dd>The dense, many-levelled city behind the wall.</dd></div>
+        <div><dt>The Bilge</dt><dd>The Delta's lowest, flooded level.</dd></div>
+        <div><dt>Gel</dt><dd>The synthesised food that feeds the Delta, dispensed as foam or lump.</dd></div>
+        <div><dt>Ration bar</dt><dd>The ration in portable form.</dd></div>
+        <div><dt>ACS</dt><dd>Axiom Chemical Synthesis — the company whose plants make the gel.</dd></div>
+        <div><dt>Real food</dt><dd>Anything soil-grown or animal-derived. Rare, licensed, and mostly for the rich.</dd></div>
+        <div><dt>The Verdant Exchange</dt><dd>The authority that licenses real food. Older than the Council.</dd></div>
+        <div><dt>The Council</dt><dd>The Unified Planetary Council, which governs and rations the Bulwark.</dd></div>
+        <div><dt>Enforcers</dt><dd>The Corps' officers on the street: crowd control, not combat.</dd></div>
+      </dl>
+    </section>
+
+    <section class="world-cta">
+      <h2>Step inside</h2>
+      <p>Book One, <em>The Rise of the Covenant</em>, is out now on Kindle.</p>
+      <div class="cta-row">
+        <a href="https://www.amazon.com/dp/B0HJLRN48X" class="btn btn-primary" target="_blank" rel="noopener">Buy Book One on Kindle</a>
+        <a class="btn btn-ghost" href="/books">Explore the Series</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mark">Hamish C. Rannoch — The Drowned Concordat</div>
+    <div class="socials">
+      <a href="https://www.instagram.com/hamish.c.rannoch/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@hamish.c.rannoch" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:hamish.c.rannoch@gmail.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
