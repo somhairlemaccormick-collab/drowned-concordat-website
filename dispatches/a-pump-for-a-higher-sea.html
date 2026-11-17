@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A pump for a higher sea, and protein from thin air — Dispatches</title>
+<meta name="description" content="The Netherlands picks a design for a giant new pumping station at IJmuiden because the sea will soon be too high to drain by gravity, and Europe&#x27;s food regulator backs a protein grown from carbon dioxide and electricity. Two real stories from the week.">
+<link rel="canonical" href="https://thedrownedconcordat.com/dispatches/a-pump-for-a-higher-sea">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Dispatches — The Drowned Concordat" href="/dispatches/feed.xml">
+<meta property="og:title" content="A pump for a higher sea, and protein from thin air — Dispatches">
+<meta property="og:description" content="The Netherlands picks a design for a giant new pumping station at IJmuiden because the sea will soon be too high to drain by gravity, and Europe&#x27;s food regulator backs a protein grown from carbon dioxide and electricity. Two real stories from the week.">
+<meta property="og:image" content="https://thedrownedconcordat.com/images/world/bulwark-storm.jpg">
+<meta property="og:url" content="https://thedrownedconcordat.com/dispatches/a-pump-for-a-higher-sea">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-deep: #05060a; --bg-panel: #0b0e16; --line: rgba(255,255,255,0.08);
+  --text-main: #e8e6df; --text-dim: #8b8f9c; --accent: #7fd8ff;
+  --accent-warm: #d9a86c; --accent-glow: rgba(127, 216, 255, 0.35);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-deep); color: var(--text-main); font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; position: relative; }
+.stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.45;
+  background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent), radial-gradient(1px 1px at 140px 80px, #fff, transparent),
+  radial-gradient(1.5px 1.5px at 300px 150px, #fff, transparent), radial-gradient(1px 1px at 520px 220px, #fff, transparent),
+  radial-gradient(1.5px 1.5px at 640px 40px, #fff, transparent), radial-gradient(1px 1px at 880px 100px, #fff, transparent),
+  radial-gradient(1px 1px at 1000px 300px, #fff, transparent);
+  background-size: 1100px 500px; }
+.glow-orb { position: fixed; border-radius: 50%; filter: blur(90px); z-index: 0; pointer-events: none;
+  width: 480px; height: 480px; background: var(--accent-glow); top: -160px; right: -120px; opacity: 0.7; }
+header, main, footer { position: relative; z-index: 1; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 32px 6vw; border-bottom: 1px solid var(--line); }
+.pen-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.08em; color: var(--text-dim); text-decoration: none; }
+nav a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 36px; transition: color 0.25s ease; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+nav a.nav-buy { color: var(--accent); }
+nav a { white-space: nowrap; }
+@media (max-width: 1400px) and (min-width: 801px) { nav a { margin-left: 22px; font-size: 0.8rem; } }
+@media (max-width: 1200px) and (min-width: 801px) { nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; } nav a { margin-left: 0; } }
+.section-tag { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 18px; }
+.page-head { text-align: center; padding: 110px 6vw 60px; max-width: 760px; margin: 0 auto; }
+.page-head h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(3rem, 8vw, 5.8rem); line-height: 0.95;
+  background: linear-gradient(180deg, #ffffff 0%, #b9c2cf 60%, #6f7889 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.page-head p { margin-top: 24px; color: var(--text-dim); font-weight: 300; line-height: 1.7; font-size: clamp(1rem, 1.5vw, 1.15rem); }
+.page-head em { color: var(--accent-warm); font-style: italic; }
+.feed-link { display: inline-block; margin-top: 22px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.feed-link:hover { text-decoration: underline; }
+
+.post-list { max-width: 960px; margin: 0 auto; padding: 0 6vw 120px; display: grid; gap: 28px; }
+.post-card { display: grid; grid-template-columns: 300px 1fr; background: linear-gradient(160deg, var(--bg-panel), #05060a);
+  border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit;
+  transition: transform 0.35s ease, border-color 0.35s ease; }
+.post-card:hover { transform: translateY(-6px); border-color: rgba(127,216,255,0.4); }
+.post-card img { width: 100%; height: 100%; min-height: 200px; object-fit: cover; display: block; }
+.post-card .body { padding: 28px 30px; }
+.post-card time, .post-meta time { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.post-card h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin-top: 10px; }
+.post-card p { margin-top: 12px; color: var(--text-dim); font-weight: 300; line-height: 1.65; font-size: 0.95rem; }
+.post-card .more { margin-top: 16px; display: inline-block; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-warm); }
+.empty { text-align: center; color: var(--text-dim); padding: 40px 0 120px; font-style: italic; }
+
+article.post { max-width: 720px; margin: 0 auto; padding: 100px 6vw 40px; }
+.post-meta { text-align: center; }
+article.post h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; text-align: center; margin-top: 16px; }
+.post-dek { text-align: center; margin: 22px auto 0; color: var(--text-dim); font-weight: 300; line-height: 1.7; font-size: 1.08rem; max-width: 600px; }
+.post-hero { margin: 50px 0 46px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 60px rgba(127,216,255,0.06); }
+.post-hero img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+.prose p, .prose li { color: #c9c8c2; line-height: 1.85; font-weight: 300; font-size: 1.04rem; }
+.prose p { margin-bottom: 20px; }
+.prose h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.9rem; line-height: 1.15; margin: 48px 0 16px; color: var(--text-main); }
+.prose h3 { font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent-warm); margin: 40px 0 12px; font-weight: 500; }
+.prose a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(127,216,255,0.35); }
+.prose a:hover { border-bottom-color: var(--accent); }
+.prose strong { color: var(--text-main); font-weight: 500; }
+.prose em { color: var(--accent-warm); }
+.prose ul, .prose ol { margin: 0 0 20px 22px; }
+.prose blockquote { border-left: 2px solid var(--accent); padding: 4px 0 4px 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: var(--text-main); }
+.prose blockquote p { font-size: inherit; color: inherit; margin: 0; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 44px 0; }
+.sources { margin-top: 54px; padding-top: 28px; border-top: 1px solid var(--line); }
+.sources h2 { font-size: 0.75rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-dim); font-weight: 500; margin-bottom: 14px; }
+.sources ol { margin-left: 20px; }
+.sources li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.6; margin-bottom: 8px; font-weight: 300; }
+.sources a { color: var(--accent); text-decoration: none; }
+.sources a:hover { text-decoration: underline; }
+.post-cta { max-width: 720px; margin: 0 auto 110px; padding: 40px 6vw 0; text-align: center; }
+.post-cta p { color: var(--text-dim); font-weight: 300; line-height: 1.7; }
+.post-cta em { color: var(--accent-warm); }
+.cta-row { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.btn { padding: 14px 30px; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; display: inline-block; }
+.btn-primary { background: var(--accent); color: #05060a; font-weight: 600; box-shadow: 0 0 30px var(--accent-glow); }
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-ghost { border: 1px solid var(--line); color: var(--text-main); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+footer { padding: 60px 6vw 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--line); }
+.footer-mark { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-dim); font-size: 0.9rem; }
+.socials { display: flex; gap: 22px; }
+.socials a { color: var(--text-dim); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.socials a:hover { color: var(--accent); }
+
+@media (max-width: 800px) {
+  header { flex-wrap: wrap; gap: 14px; }
+  nav { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+  nav a { margin-left: 0; }
+  .post-card { grid-template-columns: 1fr; }
+  .post-card img { min-height: 0; aspect-ratio: 16/9; height: auto; }
+  .post-card .body { padding: 22px 22px 26px; }
+  article.post { padding-top: 70px; }
+}
+</style>
+</head>
+<body>
+  <div class="stars"></div><div class="glow-orb"></div>
+  <header>
+    <a class="pen-name" href="/">Hamish C. Rannoch</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/books">The Series</a>
+      <a href="/books#novellas">Novellas</a>
+      <a href="/cast">Cast &amp; Factions</a>
+      <a href="/world">The World</a>
+      <a href="/dispatches/" aria-current="page">Dispatches</a>
+      <a href="/#about">About</a>
+      <a class="nav-buy" href="https://www.amazon.com/dp/B0HJLRN48X" target="_blank" rel="noopener">Buy Book One</a>
+    </nav>
+  </header>
+  <main>
+    <article class="post">
+      <div class="post-meta"><div class="section-tag">Dispatch</div><time datetime="2026-11-17">17 November 2026</time></div>
+      <h1>A pump for a higher sea, and protein from thin air</h1>
+      <p class="post-dek">The Netherlands picks a design for a giant new pumping station at IJmuiden because the sea will soon be too high to drain by gravity, and Europe&#x27;s food regulator backs a protein grown from carbon dioxide and electricity. Two real stories from the week.</p>
+      <figure class="post-hero"><img src="/images/world/bulwark-storm.jpg" alt="Storm waves breaking against a towering concrete sea wall at night, city lights behind it" width="1280" height="720"></figure>
+      <div class="prose">
+<p>This week the water story is about a door that is slowly closing, and the food story is about a meal made from the air. Neither involves a storm. Both feel a little closer to the Delta than they did a year ago.</p>
+<h2>IJmuiden gets ready to pump</h2>
+<p>At IJmuiden, where the North Sea Canal meets the coast, the Netherlands runs a complex of sluices and pumps that drains surplus water from a large part of the west of the country and helps keep the sea out. Parts of it are reaching the end of their working lives, so Rijkswaterstaat, the national water agency, has been studying what should replace them. On 10 November it announced the end of the third phase of that study, and a preferred design.</p>
+<p>The plan is a new pumping station able to move 410 cubic metres of water a second, built mostly on the northern bank of the inner discharge canal and designed to last a hundred years, with room to grow. Three options were compared on reliability, cost, fish safety, disruption to shipping and more. The winner scored best on how easily it could be built in stages, because the old complex has to keep working throughout: the water still needs somewhere to go while the new station goes up. The minister has set aside money as part of a wider reshuffle of national infrastructure projects, and the next phase will turn the design into a formal project decision, including an environmental impact study.</p>
+<h3>Why it caught my eye</h3>
+<p>The reason for all this is in one plain sentence. As the sea rises, the sluice will no longer be able to let water out on its own, and everything will have to be pumped. For generations, low tide did some of the work for free. Here is an official plan for the day that stops. The Bulwark in the book is gates, locks and pumps for exactly this reason: once the sea outside sits higher than the land inside, a wall alone keeps nothing dry. Something has to lift the water over it, every hour, for good.</p>
+<h2>Protein from thin air</h2>
+<p>The European Food Safety Authority has given a positive scientific opinion to Solein, a protein powder made by the Finnish company Solar Foods. It is grown by fermenting a microbe first found in Finnish nature, in a bioreactor, fed on carbon dioxide and hydrogen and powered by electricity, then dried into a yellow powder. The company markets it as &ldquo;protein from thin air&rdquo;. EFSA found it safe under the proposed conditions of use, which Solar Foods says makes it the first ingredient made by gas fermentation to get such an opinion.</p>
+<p>It is not on European shelves yet. The European Commission now has to draft the legal act and put it to a vote of member states, which the company expects to take seven to nine months. The application was filed just over five years ago. Solein is already sold in a few products in Singapore and the US, and its biggest shareholder, the Finnish food company Fazer, says it is ready to launch in Europe once permission comes. A much larger factory in Finland is planned, but depends on firm orders and full financing.</p>
+<h3>Why it caught my eye</h3>
+<p>The Delta eats gel, synthesised at industrial scale by Axiom Chemical Synthesis and handed out as foam or lump. Solein is nothing like gel, but the idea underneath is the same: food that doesn&rsquo;t need fields, weather or animals, just a tank, a gas and a power supply. The company&rsquo;s own pitch is predictable supply whatever the climate does. What struck me most was the timetable. The microbe was ready years ago. The long wait has been for a committee to say yes.</p>
+<hr />
+<p>That&rsquo;s it for this week. If you spot a story that belongs here, send it my way on <a href="https://www.instagram.com/hamish.c.rannoch/">Instagram</a>, and if you&rsquo;d like to see what happens behind the wall, Book One, <em>The Rise of the Covenant</em>, is out now.</p>
+      </div>
+      <aside class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Rijkswaterstaat: <a href="https://www.rijkswaterstaat.nl/nieuws/archief/2026/11/3e-fase-planstudie-spui-en-gemaalcomplex-ijmuiden" target="_blank" rel="noopener">3e fase planstudie Spui- en Gemaalcomplex IJmuiden (10 November 2026)</a></li>
+          <li>FoodBev Media: <a href="https://www.foodbev.com/news/solar-foods-receives-positive-efsa-scientific-opinion-for-novel-air-protein-ingredient" target="_blank" rel="noopener">Solar Foods receives positive EFSA scientific opinion for novel air protein ingredient (9 November 2026)</a></li>
+          <li>Food Ingredients First: <a href="https://www.foodingredientsfirst.com/news/solar-foods-efsa-solein-fazer.html" target="_blank" rel="noopener">Solar Foods&#x27; Solein gains positive EFSA opinion as Fazer prepares EU launch (10 November 2026)</a></li>
+        </ol>
+      </aside>
+    </article>
+    <section class="post-cta">
+      <p>The world behind the wall is fiction. <em>The Rise of the Covenant</em>, Book One of The Drowned Concordat, is out now on Kindle.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HJLRN48X" target="_blank" rel="noopener">Buy Book One</a>
+        <a class="btn btn-ghost" href="/dispatches/">More Dispatches</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-mark">Hamish C. Rannoch — The Drowned Concordat</div>
+    <div class="socials">
+      <a href="/dispatches/feed.xml">RSS</a>
+      <a href="https://www.instagram.com/hamish.c.rannoch/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@hamish.c.rannoch" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:hamish.c.rannoch@gmail.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
